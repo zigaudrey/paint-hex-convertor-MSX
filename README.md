@@ -12,3 +12,11 @@ A Python Script that convert a picture into a binary file for editing Sega Genes
 To verify if this has 16 colors, open the picture in a software using palette (eg. GIMP)
 
 4. A new BIN file will be created, ready to be used for the YY-CHR tool.
+
+## Result
+![Toejam and Earl - HUM Logo Mod](https://github.com/zigaudrey/paint-to-bin-MSX/assets/129554573/daaf9907-d925-4e45-83cf-df9ec2a5ee8d) Toejam & Earl Screenshot
+
+## Personal Thought
+YY-CHR is obsolete for Sega Genesis/Megadrive graphic, especially for someone visual. You can't shrink the window to have better sprite display and knowing what you are doing.
+Instead, YY-CHR is more fitted to see which offset the sprite is and replace the data throught an Hex Editor, which what I did above. It seen YY-CHR is made for 2-bit graphic like NES/Virtual Boy.
+I hope to find a tool that center on Sega graphics but the MOD scene for this console is too narrowed (too much Sonic MOD).
