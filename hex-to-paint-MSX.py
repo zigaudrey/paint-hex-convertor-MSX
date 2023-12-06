@@ -50,7 +50,6 @@ if len(PAL_path) != 0:
                         n -= 1
                     
                     tile_COUNT = 0
-
                     while tile_COUNT == 0:
                         tile_COUNT = int(input("Choose Tile Number (4 to 16)"))
                         if 4 > tile_COUNT or tile_COUNT > 16 :
