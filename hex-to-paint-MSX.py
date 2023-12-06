@@ -48,14 +48,12 @@ if len(PAL_path) != 0:
                     while n!= 0 and BIN_name[n] != '/':
                         SHORT_name = BIN_name[n] + SHORT_name
                         n -= 1
-
+                    
                     tile_COUNT = 0
 
-                    while not str(tile_COUNT) in "45" and tile_COUNT == 0:
-                        tile_COUNT = int(input("Choose Tile Number (4 or 5)"))
-                        if len(str(tile_COUNT)) > 1:
-                            print("No Number Chosen")
-                            print("")
+                    while tile_COUNT == 0:
+                        tile_COUNT = int(input("Choose Tile Number (4 to 16)"))
+                        if 4 > tile_COUNT or tile_COUNT > 16 :
                             tile_COUNT = 0
 
                     BIN_len = len(BIN_file) + ((tile_COUNT * 32) - (len(BIN_file) % (tile_COUNT * 32)))
