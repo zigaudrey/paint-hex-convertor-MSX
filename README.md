@@ -23,6 +23,6 @@ Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesi
 ## Result
 ![Toejam and Earl - HUM Logo Mod](https://github.com/zigaudrey/paint-to-bin-MSX/assets/129554573/daaf9907-d925-4e45-83cf-df9ec2a5ee8d) Toejam & Earl Screenshot
 
-## HISTORY
+## History
 Previously know as paint-to-bin-MSX, the repository is upgraded into a both-way convertor. Now, you need two files (Palette and Sprite Sheet) for paint-to-hex script.
 Turning a Bin data into Image is an ambitious idea. I am glad to turn this dream come true. For someone visual, Sprite Editing become easier (and better than YY-CHR).
