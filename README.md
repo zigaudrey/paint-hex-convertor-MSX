@@ -14,7 +14,7 @@ Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesi
 3. **Two bin files will be created**, ready to replace data in the ROM
 
 ## Hex-to-paint Steps
-3. Get the Palette and Sprites data from the ROM. **Use the [GSavestate](https://www.romhacking.net/utilities/344/) and [CHR-YY](https://www.romhacking.net/utilities/119/) repectivily and create new files with an Hex editor. _Don't forget to mention the offset_**
+3. Get the Palette and Sprites data from the ROM. **Use the [GSavestate](https://www.romhacking.net/utilities/344/) and [CHR-YY](https://www.romhacking.net/utilities/119/) repectivily to locate them and create new files with an Hex editor. _Don't forget to mention the offset_**
 3. Choose a palette (bin file). **Its lenght has to be 32**
 3. Choose a sprite sheet (bin file). **Its lenght has to be a divisble of 32 (one tile)**
 3. Choose **the number of tiles for the width**
