@@ -75,7 +75,7 @@ if len(PAL_path) != 0:
                                         OUTCOME.putpixel((x+ix+1,y+iz), PAL_List[n2])
                                         Pointer += 1
 
-                    OUTCOME.save(SHORT_name + " - " + str(tile_COUNT) + " Tiles MSX.png")
+                    OUTCOME.save(SHORT_name + " - " + str(tile_COUNT) + " Tiles.png")
 
                     PAL_OUTCOME= Image.new('RGB', (8 , 2))
 
