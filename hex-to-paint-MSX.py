@@ -55,7 +55,7 @@ if len(PAL_path) != 0:
                         if 4 > tile_COUNT or tile_COUNT > 16 :
                             tile_COUNT = 0
 
-                    BIN_len = len(BIN_file) + ((tile_COUNT * 32) - (len(BIN_file) % (tile_COUNT * 32)))
+                    BIN_len = len(BIN_file) + (len(BIN_file) % (tile_COUNT * 32))
                     w = 8 * tile_COUNT
                     h = BIN_len // (tile_COUNT * 32) * 8
 
