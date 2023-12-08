@@ -64,11 +64,11 @@ if len(pal_file)!=0:
                                     bin_color = struct.pack("B", b1 * 16 + b2)
                                     bit_paint += bin_color
 
-                    out_file = open(new_bin_file + " Pal Bin.bin", "wb+")
+                    out_file = open(new_bin_file + " MSX Pal.bin", "wb+")
                     out_file.write(BGR_pal)
                     out_file.close()
                                     
-                    out_file = open(new_bin_file + " Pic Converted.bin", "wb+")
+                    out_file = open(new_bin_file + " MSX Image.bin", "wb+")
                     out_file.write(bit_paint)
                     out_file.close()
 
