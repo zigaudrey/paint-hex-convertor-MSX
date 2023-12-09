@@ -1,7 +1,7 @@
 ![Paint-Bin Convetor - Sega Genesis BANNER](https://github.com/zigaudrey/paint-hex-convertor-MSX/assets/129554573/44e32b22-2809-4761-8027-f73d21a9ebd8)
 
 # Paint - Hex Convertor Scripts (Sega Genesis / Megadrive)
-Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesis / MegaDrive.
+Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesis / MegaDrive Sprite Editing.
 
 ## Setup
 1. If you don't have PIL, **open the command prompt and install it with PIP**
