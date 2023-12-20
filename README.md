@@ -28,4 +28,5 @@ Previously know as paint-to-bin-MSX, the repository is upgraded into a both-way 
 Turning a Bin data into Image is an ambitious idea. I am glad to turn this dream come true. For someone visual, Sprite Editing become easier (and better than YY-CHR).
 
 ## Similar Tool
-[Paint-Hex Convertor (Gameboy Advance / DS 16-Colors)](https://github.com/zigaudrey/paint-hex-convertor-GBA-DS)
++ [Paint-Hex Convertor (Gameboy Advance / DS 16-Colors)](https://github.com/zigaudrey/paint-hex-convertor-GBA-DS)
++ [Paint - Hex Convertor DS-256 colors](https://github.com/zigaudrey/paint-hex-convertor-DS-256/tree/main)
