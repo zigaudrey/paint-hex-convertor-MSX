@@ -11,6 +11,7 @@ Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesi
 3. Create a separate file for the palette. **Be sure the colors match with the picture you will using**
 3. Choose a palette (image). **It have to have a total of 16 pixels**
 3. Choose a sprite sheet (image). **Its dimensions both should be a divisible of 8**
+3. Mention if **the picture is displayed vertically or horizontally.**
 3. **Two bin files will be created**, ready to replace data in the ROM
 
 ## Hex-to-paint Steps
@@ -18,10 +19,14 @@ Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesi
 3. Choose a palette (bin file). **Its lenght has to be 32**
 3. Choose a sprite sheet (bin file). **Its lenght has to be a divisble of 32 (one tile)**
 3. Choose **the number of tiles for the width**
+3. Choose if **you want to display the tiles vertically or horizontally.**
 3. **Two images files will be created**, ready to be edited in drawing tools
 
 ## Result
 ![Toejam and Earl - HUM Logo Mod](https://github.com/zigaudrey/paint-to-bin-MSX/assets/129554573/daaf9907-d925-4e45-83cf-df9ec2a5ee8d) Toejam & Earl Screenshot
+
+## Update
+**1st Febuary of 2024**: Added the option to display verticallly/horizontally.
 
 ## History
 Previously know as paint-to-bin-MSX, the repository is upgraded into a both-way convertor. Now, you need two files (Palette and Sprite Sheet) for paint-to-hex script.
