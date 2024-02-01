@@ -50,30 +50,57 @@ if len(PAL_path) != 0:
                         n -= 1
                     
                     tile_COUNT = 0
+
                     while tile_COUNT == 0:
-                        tile_COUNT = int(input("Choose Tile Number (4 to 16)"))
-                        if 4 > tile_COUNT or tile_COUNT > 16 :
+                        tile_COUNT = int(input("Choose Tile Number (4 to 32)"))
+                        if 4 > tile_COUNT or tile_COUNT > 32 :
                             tile_COUNT = 0
 
-                    BIN_len = len(BIN_file) + (len(BIN_file) % (tile_COUNT * 32))
-                    w = 8 * tile_COUNT
-                    h = BIN_len // (tile_COUNT * 32) * 8
+                    display_MODE = ""
 
+                    while display_MODE == "":
+                        display_MODE = str(input("Is the picture displayed vertically or horizontally? v/h")).lower()
+                        if display_MODE != "v" and display_MODE != "h":
+                            display_MODE = ""
+
+                    BIN_len = len(BIN_file) + (len(BIN_file) % (tile_COUNT * 32))
+
+                    if display_MODE == "v":
+                        w = 8 * tile_COUNT
+                        h = BIN_len // (tile_COUNT * 32) * 8
+
+                    else:
+                        h = 8 * tile_COUNT
+                        w = BIN_len // (tile_COUNT * 32) * 8
+                        
                     OUTCOME= Image.new('RGB', (w , h))
 
                     Pointer = 0
                     n1, n2 = 0 ,0
-                    for y in range(0, h, 8):
-                        for x in range (0, w, 8):
-                            for iz in range(0, 8):
-                                for ix in range(0, 8, 2):
-                                    if Pointer < len(BIN_file):
-                                        Hex_Data = struct.pack("B", BIN_file[Pointer])[0]
-                                        n1 = Hex_Data // 16
-                                        n2 = Hex_Data - (n1 * 16)
-                                        OUTCOME.putpixel((x+ix,y+iz), PAL_List[n1])
-                                        OUTCOME.putpixel((x+ix+1,y+iz), PAL_List[n2])
-                                        Pointer += 1
+                    if display_MODE == "v":
+                        for y in range(0, h, 8):
+                            for x in range (0, w, 8):
+                                for iz in range(0, 8):
+                                    for ix in range(0, 8, 2):
+                                        if Pointer < len(BIN_file):
+                                            Hex_Data = struct.pack("B", BIN_file[Pointer])[0]
+                                            n1 = Hex_Data // 16
+                                            n2 = Hex_Data - (n1 * 16)
+                                            OUTCOME.putpixel((x+ix,y+iz), PAL_List[n1])
+                                            OUTCOME.putpixel((x+ix+1,y+iz), PAL_List[n2])
+                                            Pointer += 1
+                    else:
+                        for x in range(0, w, 8):
+                            for y in range (0, h, 8):
+                                for iz in range(0, 8):
+                                    for ix in range(0, 8, 2):
+                                        if Pointer < len(BIN_file):
+                                            Hex_Data = struct.pack("B", BIN_file[Pointer])[0]
+                                            n1 = Hex_Data // 16
+                                            n2 = Hex_Data - (n1 * 16)
+                                            OUTCOME.putpixel((x+ix,y+iz), PAL_List[n1])
+                                            OUTCOME.putpixel((x+ix+1,y+iz), PAL_List[n2])
+                                            Pointer += 1
 
                     OUTCOME.save(SHORT_name + " - " + str(tile_COUNT) + " Tiles.png")
 
