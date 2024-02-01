@@ -51,18 +51,41 @@ if len(pal_file)!=0:
                         n -= 1
 
                     b1, b2 = 0 , 0
-                    for y in range(0, h, 8):
-                        for x in range (0, w, 8):
-                            for iz in range(0, 8):
-                                for ix in range(0, 8, 2):
-                                    b1, b2 = 0 , 0
-                                    RGB_1, RGB_2 = openpic.getpixel((x+ix,y+iz)) , openpic.getpixel((x+ix+1,y+iz))
-                                    if RGB_1 in list_colors:
-                                        b1 = list_colors.index(RGB_1)
-                                    if RGB_2 in list_colors:
-                                        b2 = list_colors.index(RGB_2)                      
-                                    bin_color = struct.pack("B", b1 * 16 + b2)
-                                    bit_paint += bin_color
+
+                    display_MODE = ""
+
+                    while display_MODE == "":
+                        display_MODE = str(input("Display vertically or horizontally? v/h")).lower()
+                        if display_MODE != "v" and display_MODE != "h":
+                            display_MODE = ""
+                    
+                    if display_MODE == "v": 
+                        for y in range(0, h, 8):
+                            for x in range (0, w, 8):
+                                for iz in range(0, 8):
+                                    for ix in range(0, 8, 2):
+                                        b1, b2 = 0 , 0
+                                        RGB_1, RGB_2 = openpic.getpixel((x+ix,y+iz)) , openpic.getpixel((x+ix+1,y+iz))
+                                        if RGB_1 in list_colors:
+                                            b1 = list_colors.index(RGB_1)
+                                        if RGB_2 in list_colors:
+                                            b2 = list_colors.index(RGB_2)                      
+                                        bin_color = struct.pack("B", b1 * 16 + b2)
+                                        bit_paint += bin_color
+                    else:
+                        for x in range(0, w, 8):
+                            for y in range (0, h, 8):
+                                for iz in range(0, 8):
+                                    for ix in range(0, 8, 2):
+                                        b1, b2 = 0 , 0
+                                        RGB_1, RGB_2 = openpic.getpixel((x+ix,y+iz)) , openpic.getpixel((x+ix+1,y+iz))
+                                        if RGB_1 in list_colors:
+                                            b1 = list_colors.index(RGB_1)
+                                        if RGB_2 in list_colors:
+                                            b2 = list_colors.index(RGB_2)                      
+                                        bin_color = struct.pack("B", b1 * 16 + b2)
+                                        bit_paint += bin_color
+
 
                     out_file = open(new_bin_file + " MSX Pal.bin", "wb+")
                     out_file.write(BGR_pal)
