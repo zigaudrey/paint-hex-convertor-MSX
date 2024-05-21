@@ -43,8 +43,11 @@ if len(PAL_path) != 0:
 
                 if len(BIN_file) % 32 == 0:
 
-                    n=len(BIN_name)-5
+                    n=len(BIN_name)-1
                     SHORT_name = ""
+                    while n!= 0 and BIN_name[n] != '.':
+                        n -= 1
+                    n -= 1
                     while n!= 0 and BIN_name[n] != '/':
                         SHORT_name = BIN_name[n] + SHORT_name
                         n -= 1
