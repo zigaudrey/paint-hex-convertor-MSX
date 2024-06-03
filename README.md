@@ -23,7 +23,7 @@ Python Scripts that convert Picture into Bin file and vice-versa for Sega Genesi
 3. **Two images files will be created**, ready to be edited in drawing tools
 
 ## Result
-![Toejam and Earl - HUM Logo Mod](https://github.com/zigaudrey/paint-to-bin-MSX/assets/129554573/daaf9907-d925-4e45-83cf-df9ec2a5ee8d) Toejam & Earl Screenshot
+![Fusion_VvzzC6zCaj-Toejam-and-Earl---Logo-Edit](https://github.com/zigaudrey/paint-hex-convertor-MSX/assets/129554573/c34f6f9e-147c-44a5-9d26-45d70f90f204) Toejam & Earl
 
 ## Update
 **1st Febuary of 2024**: Added the option to display verticallly/horizontally.
