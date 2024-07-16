@@ -65,9 +65,9 @@ if len(pal_file)!=0:
 
                     display_MODE = ""
 
-                    while display_MODE != "":
-                        display_MODE = int(input("It is displayed vertically or horizontally? v/h")).lower()
-                        if display_MODE != "v" or display_MODE != "h":
+                    while display_MODE == "":
+                        display_MODE = str(input("It is displayed vertically or horizontally? v/h")).lower()
+                        if display_MODE != "v" and display_MODE != "h":
                             display_MODE = ""
 
                     b1, b2 = 0 , 0
