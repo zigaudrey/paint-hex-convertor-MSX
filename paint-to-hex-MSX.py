@@ -12,6 +12,16 @@ if len(pal_file)!=0:
     openpal = Image.open(pal_file).convert("RGB")
     wp,hp = openpal.size
 
+    short_pal_name = ""
+
+    n=len(pal_file)-1
+    while n!= 0 and pal_file[n] != '.':
+        n -= 1
+    n -= 1
+    while n!= 0 and pal_file[n] != '/':
+        short_pal_name = pal_file[n] + short_pal_name
+        n -= 1
+
     BGR_pal = bytearray()
     
     if wp * hp == 16:
@@ -53,15 +63,15 @@ if len(pal_file)!=0:
                         new_bin_file = targ_file[n] + new_bin_file
                         n -= 1
 
-                    b1, b2 = 0 , 0
-
                     display_MODE = ""
 
-                    while display_MODE == "":
-                        display_MODE = str(input("Display vertically or horizontally? v/h")).lower()
-                        if display_MODE != "v" and display_MODE != "h":
+                    while display_MODE != "":
+                        display_MODE = int(input("It is displayed vertically or horizontally? v/h")).lower()
+                        if display_MODE != "v" or display_MODE != "h":
                             display_MODE = ""
-                    
+
+                    b1, b2 = 0 , 0
+
                     if display_MODE == "v": 
                         for y in range(0, h, 8):
                             for x in range (0, w, 8):
@@ -90,7 +100,7 @@ if len(pal_file)!=0:
                                         bit_paint += bin_color
 
 
-                    out_file = open(new_bin_file + " MSX Pal.bin", "wb+")
+                    out_file = open(short_pal_name + " MSX Pal.bin", "wb+")
                     out_file.write(BGR_pal)
                     out_file.close()
                                     
